@@ -36,175 +36,180 @@
             </div>
         </div>
     </header>
-    <div class="container">
-        <div class="top-menu">
-            <!-- Лучше названия класса не предумал :| -->
-            <!--!! Здесь, честно говоря, можно обойтись вообще без обертки !!-->
-
+    <main>
+        <div class="container clearfix">
             <h1>Средства для ухода</h1>
             <nav class="breadcrumbs">
                 <a href="index.html" title="Главная">Главная</a>
                 <a href="#" title="Магазин">Магазин</a>
-                <a href="#" class="active" title="Средства для ухода">Средства для ухода</a>
+                <!-- По ТЗ - последний пункт - не ссылка -->
+                <span class="last-crumb">Средства для ухода</span>
             </nav>
-        </div>
 
         <div class="content">
             <div class="content-filter pull-left">
                 <form action="https://echo.htmlacademy.ru" method="get">
-                    <div class="filter-checkboxes">
-                        <h2>Производители</h2>
+                    <div class="filter-group">
+                        <h2 class="filter-title">Производители</h2>
                         <label>
-                            <input type="checkbox" name="Baxter of Colifornia" checked>Baxter of Colifornia</label>
-                        <br>
+                            <input type="checkbox" name="makers" value="Baxter of Colifornia" checked>
+                            <span class="checkbox-text">Baxter of Colifornia</span>
+                        </label>
                         <label>
-                            <input type="checkbox" name="Mr. Natty">Mr. Natty</label>
-                        <br>
+                            <input type="checkbox" name="makers" value="Mr. Natty">
+                            <span class="checkbox-text">Mr. Natty</span>
+                        </label>
                         <label>
-                            <input type="checkbox" name="Suavecito" checked>Suavecito</label>
-                        <br>
+                            <input type="checkbox" name="makers" value="Suavecito" checked>
+                            <span class="checkbox-text">Suavecito</span>
+                        </label>
                         <label>
-                            <input type="checkbox" name="Malin+Goetz">Malin+Goetz</label>
-                        <br>
+                            <input type="checkbox" name="makers" value="Malin+Goetz">
+                            <span class="checkbox-text">Malin+Goetz</span>
+                        </label>
                         <label>
-                            <input type="checkbox" name="Murray's">Murray's</label>
-                        <br>
+                            <input type="checkbox" name="makers" value="Murray's"><span class="checkbox-text">Murray's</span>
+                        </label>
                         <label>
-                            <input type="checkbox" name="American crew" checked>American crew</label>
-                        <br>
+                            <input type="checkbox" name="makers" value="American crew" checked><span class="checkbox-text">American crew</span>
+                        </label>
                         <!--!!  
-							1. Раз уж ты используешь такую конструкцию для инпутов, то лучше текст заключить, допустим, в span. Это будет нужно для оформления красивых чекбоксов и радио - потом пригодится ;)
-							2. Зачем использовать лишний раз брейки, если в css можно просто укзазать display: block; у лейблов? ;)
+							VV 1. Раз уж ты используешь такую конструкцию для инпутов, то лучше текст заключить, допустим, в span. Это будет нужно для оформления красивых чекбоксов и радио - потом пригодится ;)
+							VV 2. Зачем использовать лишний раз брейки, если в css можно просто укзазать display: block; у лейблов? ;)
+                            3. name space, lowercase
+                            4. name - одинаковый, value - разный
+                            5. span->radio
+                            6. main
                         !!-->
                     </div>
-                    <div class="filter-radio">
-                        <h2>Группы товаров</h2>
+                    <div class="filter-group">
+                        <h2 class="filter-title">Группы товаров</h2>
                         <label>
-                            <input type="radio" name="group" value="shavers">Бритвенные принадлежности</label>
+                            <input type="radio" name="group" value="shavers">
+                            <span class="radio-text">Бритвенные принадлежности</span>
+                        </label>
                         <label>
-                            <input type="radio" name="group" value="cares" checked>Средства для ухода</label>
+                            <input type="radio" name="group" value="cares" checked>
+                            <span class="radio-text">Средства для ухода</span>
+                        </label>
                         <label>
-                            <input type="radio" name="group" value="accesories">Аксессуары</label>
+                            <input type="radio" name="group" value="accesories">
+                            <span class="radio-text">Аксессуары</span>
+                        </label>
                     </div>
-                    <input type="submit" value="Показать">
+                    <div class="btn form-call-btn">
+                        <a href="#"><input type="submit" value="Показать"></a>
+                        <!-- По ТЗ если JavaScript отл - по клику должен быть переход на отд страницу. Т.е. вокруг инпута ещё а должна быть? -->
+                    </div>
                 </form>
             </div>
+
             <div class="content-items">
-                <!-- Этот блок можно же на другую страницу перенести. Значит  article? -->
-          		<!--!! Если ты о корректности использования/семантичности тега article, то да, можно !!-->
+                <div class="item-list clearfix">
+                    <article class="item">
+                        <a href="item.html" title="Подробнее">
+                            <img src="img/baxter-set.png" class="item-preview" alt="Набор для путешествий Baxter" height="165" width="220">
+                        </a>
+                        <h4 class="item-title">
+                            <a href="item.html" title="Подробнее">Набор для путешествий "Baxter of California"</a>
+                        </h4>
+                        
+                        <div class="order">
+                            <span class="order-price">2900 руб.</span>
+                            <a href="#" class="btn order-btn">Купить</a>
+                        </div>
+                        <!--!! ?? Блок заказа товара в подавляющем количестве случаев самостоятелен. У него есть свой отдельный класс(например, order) и у каждого дочернего элемента тоже свой класс. То есть, например, div.order>(span.order-price+a.btn.order-btn). Ну либо form.order>(span.order-price+button.btn.order-btn) !!-->
+                    </article>
 
-                <article class="item">
-                    <a href="item.html" title="Подробнее">
-                        <img src="img/baxter-set.png" class="item-preview" alt="Набор для путешествий Baxter" height="165" width="220">
-                    </a>
-                    <a href="item.html" title="Подробнее">
-                        <span class="item-title">Набор для путешествий "Baxter of California"</span>
-                    </a>
-                    <!--!! Зачем спан, если ты можешь дать класс ссылке и управлять внешним видом элемента через него? Единственное что: у тебя валидатор будет ругаться(предупреждения) на отсутсвие заголовков внутри article, поэтому, если ты дотошный парень, то можно сделать конструкцию типа h4.item-title>a !!-->
+                    <article class="item">
+                        <a href="item.html" title="Подробнее">
+                            <img src="img/baxter-conditioner.png" class="item-preview" alt="Увлажняющий кондиционер Baxter" height="165" width="220">
+                        </a>
+                        
+                        <h4 class="item-title">
+                            <a href="item.html" title="Подробнее">Увлажняющий кондиционер "Baxter of California"</a>
+                        </h4>
+                        
+                        <div class="order">
+                            <span class="order-price">2900 руб.</span>
+                            <a href="#" class="btn order-btn">Купить</a>
+                        </div>
+                    </article>
 
-                    <div class="item-lowblock">
-                        <!-- ??? -->
-                        <div class="item-price">2900 руб.</div>
-                        <div class="item-buybtn">
-                            <!-- ??? -->
-                            <button class="btn item-buy">Купить</button>
+                    <article class="item">
+                        <a href="item.html" title="Подробнее">
+                            <img src="img/suavecito.png" class="item-preview" alt="Увлажняющий кондиционер Baxter" height="165" width="220">
+                        </a>
+                        
+                        <h4 class="item-title">
+                            <a href="item.html" title="Подробнее">Гель для волос "Suavecito"</a>
+                        </h4>
+                        
+                        <div class="order">
+                            <span class="order-price">2900 руб.</span>
+                            <a href="#" class="btn order-btn">Купить</a>
                         </div>
-                    </div>
-                    <!--!! Блок заказа товара в подавляющем количестве случаев самостоятелен. У него есть свой отдельный класс(например, order) и у каждого дочернего элемента тоже свой класс. То есть, например, div.order>(span.order-price+a.btn.order-btn). Ну либо form.order>(span.order-price+button.btn.order-btn) !!-->
-                </article>
-                <article class="item">
-                    <a href="item.html" title="Подробнее">
-                        <img src="img/baxter-conditioner.png" class="item-preview" alt="Увлажняющий кондиционер Baxter" height="165" width="220">
-                    </a>
-                    <a href="item.html" title="Подробнее">
-                        <span class="item-title">Увлажняющий кондиционер "Baxter of California"</span>
-                    </a>
-                    <div class="item-lowblock">
-                        <!-- ??? -->
-                        <div class="item-price">750 руб.</div>
-                        <div class="item-buybtn">
-                            <!-- ??? -->
-                            <button class="btn item-buy">Купить</button>
+                    </article>
+
+                    <article class="item">
+                        <a href="item.html" title="Подробнее">
+                            <img src="img/clay-american-crew.png" class="item-preview" alt="Глина для укладки волос American crew" height="165" width="220">
+                        </a>
+                        
+                        <h4 class="item-title">
+                            <a href="item.html" title="Подробнее">Глина для укладки волос "American crew"</a>
+                        </h4>
+                        
+                        <div class="order">
+                            <span class="order-price">2900 руб.</span>
+                            <a href="#" class="btn order-btn">Купить</a>
                         </div>
-                    </div>
-                </article>
-                <article class="item">
-                    <a href="item.html" title="Подробнее">
-                        <img src="img/suavecito.png" class="item-preview" alt="Увлажняющий кондиционер Baxter" height="165" width="220">
-                    </a>
-                    <a href="item.html" title="Подробнее">
-                        <span class="item-title">Гель для волос "Suavecito"</span>
-                    </a>
-                    <div class="item-lowblock">
-                        <!-- ??? -->
-                        <div class="item-price">290 руб.</div>
-                        <div class="item-buybtn">
-                            <!-- ??? -->
-                            <button class="btn item-buy">Купить</button>
+                    </article>
+
+                    <article class="item">
+                        <a href="item.html" title="Подробнее">
+                            <img src="img/gel-american-crew.png" class="item-preview" alt="Глина для укладки волос American crew" height="165" width="220">
+                        </a>
+                        
+                        <h4 class="item-title">
+                            <a href="item.html" title="Подробнее">Гель для волос "American crew"</a>
+                        </h4>
+                        
+                        <div class="order">
+                            <span class="order-price">2900 руб.</span>
+                            <a href="#" class="btn order-btn">Купить</a>
                         </div>
-                    </div>
-                </article>
-                <article class="item">
-                    <a href="item.html" title="Подробнее">
-                        <img src="img/clay-american-crew.png" class="item-preview" alt="Глина для укладки волос American crew" height="165" width="220">
-                    </a>
-                    <a href="item.html" title="Подробнее">
-                        <span class="item-title">Глина для укладки волос "American crew"</span>
-                    </a>
-                    <div class="item-lowblock">
-                        <!-- ??? -->
-                        <div class="item-price">500 руб.</div>
-                        <div class="item-buybtn">
-                            <!-- ??? -->
-                            <button class="btn item-buy">Купить</button>
+                    </article>
+
+                    <article class="item">
+                        <a href="item.html" title="Подробнее">
+                            <img src="img/shave-set-baxter.png" class="item-preview" alt="Набор для бритья Baxter of California" height="165" width="220">
+                        </a>
+                        
+                        <h4 class="item-title">
+                            <a href="item.html" title="Подробнее">Набор для бритья "Baxter of California"</a>
+                        </h4>
+                        
+                        <div class="order">
+                            <span class="order-price">2900 руб.</span>
+                            <a href="#" class="btn order-btn">Купить</a>
                         </div>
-                    </div>
-                </article>
-                <article class="item">
-                    <a href="item.html" title="Подробнее">
-                        <img src="img/gel-american-crew.png" class="item-preview" alt="Глина для укладки волос American crew" height="165" width="220">
-                    </a>
-                    <a href="item.html" title="Подробнее">
-                        <span class="item-title">Гель для волос "American crew"</span>
-                    </a>
-                    <div class="item-lowblock">
-                        <!-- ??? -->
-                        <div class="item-price">300 руб.</div>
-                        <div class="item-buybtn">
-                            <!-- ??? -->
-                            <button class="btn item-buy">Купить</button>
-                        </div>
-                    </div>
-                </article>
-                <article class="item">
-                    <a href="item.html" title="Подробнее">
-                        <img src="img/shave-set-baxter.png" class="item-preview" alt="Набор для бритья Baxter of California" height="165" width="220">
-                    </a>
-                    <a href="item.html" title="Подробнее">
-                        <span class="item-title">Набор для бритья "Baxter of California"</span>
-                    </a>
-                    <div class="item-lowblock">
-                        <!-- ??? -->
-                        <div class="item-price">3900 руб.</div>
-                        <div class="item-buybtn">
-                            <!-- ??? -->
-                            <button class="btn item-buy">Купить</button>
-                        </div>
-                    </div>
-                </article>
+                    </article>
+                </div>
+
+                <nav class="nav">
+                    <ul>
+                        <li class="nav-page"><a href="index.html" title="1">1</a></li>
+                        <li class="nav-page active"><a href="index.html" title="2">2</a></li>
+                        <li class="nav-page"><a href="index.html" title="3">3</a></li>
+                        <li class="nav-page"><a href="index.html" title="4">4</a></li>
+                    </ul>
+                </nav>
+                <!-- По ТЗ - активный пункт - не ссылка. Как это? Можно через JS динамически а на span менять -->
             </div>
         </div>
 
-        <nav class="nav">
-            <ul>
-                <li class="nav-page"><a href="index.html" alt="1">1</a></li>
-                <li class="nav-page active"><a href="index.html" alt="2">2</a></li>
-                <li class="nav-page"><a href="index.html" alt="3">3</a></li>
-                <li class="nav-page"><a href="index.html" alt="4">4</a></li>
-            </ul>
-        </nav>
-        <!--!! Пагинация является частью блока content-items !!-->
-    </div>
+    </main>
     <footer class="main-footer">
         <div class="container clearfix">
             <section class="footer-contacts">
