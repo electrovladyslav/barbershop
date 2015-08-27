@@ -1,4 +1,41 @@
-body {
+/*Fonts
+размер шрифта, 				font-size
+высоту строки,				 line-height
+цвет шрифта,				 color
+жирность шрифта, 			font-weight
+гарнитуру (название шрифта).  font-family
+*/
 
-	
+body {
+	font-size: 14px;
+	line-height: 24px;
+	color: black;
+	font-weight: bold;
+	font-family: "PTSans NarrowBold";
+}
+/*Изменил в shop & item h1-> h2, h2->h3, 
+чтобы по размеру шрифта сответс-ли index */
+h2 {
+	font-size: 30px;
+	color: black;
+	font-weight: bold;
+	font-family: "PTSans NarrowBold";
+}
+
+h3 {
+	font-size: 24px;
+	color: black;
+	font-family: "PTSans NarrowBold";
+	font-weight: bold;
+}
+
+.logo {
+	background-color: black;
+	padding-top: 5px;
+}
+
+.logo>img {
+	display: block;
+	margin: 5px auto;
+	width: 368px;
 }
