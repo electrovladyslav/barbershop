@@ -6,17 +6,26 @@ body {
 	color: black;
 	font-weight: bold;
 	font-family: "PT Sans NarrowBold";
+	text-transform: uppercase; //как насчёт этого?
 }
 
-h2 {
+h1 {
 	font-size: 30px;
 	color: black;
 	font-weight: bold;
 	font-family: "PT Sans NarrowBold";
 }
 
-h3 {
+h2 {
 	font-size: 24px;
+	color: black;
+	font-family: "PT Sans NarrowBold";
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 14px;
+	line-height: 18px;
 	color: black;
 	font-family: "PT Sans NarrowBold";
 	font-weight: bold;
