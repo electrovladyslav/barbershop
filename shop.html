@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
-    <title>Барбершоп «Бородинский» - Магазин</title>
+    <title>Средства для ухода</title>
 </head>
 
 <body>
     <header class="main-header">
         <div class="container clearfix">
             <nav class="main-navigation">
-                <ul>
+               <!--  <ul>
                     <li>
                         <a href="index.html">Главная</a>
                     </li>
@@ -30,7 +30,7 @@
                     <li>
                         <a href="#">Контакты</a>
                     </li>
-                </ul>
+                </ul> -->
             </nav>
             <div class="user-block">
                 <a href="#" class="login">Вход</a>
@@ -40,18 +40,16 @@
     
     <main>
         <div class="container clearfix">
-            <h1 class="shop-main-title">Средства для ухода</h1>
+            <h1 class="shop-main-title main-title">Средства для ухода</h1>
             <nav class="breadcrumbs">
                 <a href="index.html" title="Главная">Главная</a>
                 <a href="#" title="Магазин">Магазин</a>
                 <span class="last-crumb">Средства для ухода</span>
             </nav>
-            <!-- убрать crumb -->
-            <!-- поправил -->
             <div class="content">
                 <div class="content-filter pull-left">
                     <form action="https://echo.htmlacademy.ru" method="get">
-                        <div class="filter-group">
+                        <div class="filter-group makers">
                             <h2 class="filter-title">Производители</h2>
                             <label>
                                 <input type="checkbox" name="makers[]" value="Baxter of California" checked>
@@ -80,7 +78,7 @@
                                 2. Добавил скобки: name="makers[]"
                             !!-->
                         </div>
-                        <div class="filter-group">
+                        <div class="filter-group group">
                             <h2 class="filter-title">Группы товаров</h2>
                             <label>
                                 <input type="radio" name="group" value="shavers">
@@ -113,7 +111,6 @@
                             <h3 class="item-title">
                                 <a href="item.html" title="Подробнее">
                                     <span class="item-type normalcase">Набор для путешествий</span>
-                                    <!-- сменил класс названия на maker-name -->
                                     <span class="maker-name">"Baxter of California"</span></a>
                             </h3>
                             
@@ -214,17 +211,14 @@
                         </article>
                     </div>
 
-                    <nav class="nav">
-                        <ul>
+                    <nav class="nav">pluginator
+                        <!-- <ul>
                             <li class="nav-page"><a href="index.html" title="1">1</a></li>
                             <li class="nav-page active"><a href="index.html" title="2">2</a></li>
                             <li class="nav-page"><a href="index.html" title="3">3</a></li>
                             <li class="nav-page"><span class="active">4</span></li>
-                        </ul>
+                        </ul> -->
                     </nav>
-                    <!-- По ТЗ - активный пункт - не ссылка. Как это? Можно через JS динамически а на span менять -->
-                    <!-- a -> span -->
-                    <!-- поправил -->
                 </div>
             </div>
 
