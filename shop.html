@@ -4,14 +4,14 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
-    <title>Барбершоп «Бородинский» - Магазин</title>
+    <title>Средства для ухода</title>
 </head>
 
 <body>
     <header class="main-header">
         <div class="container clearfix">
             <nav class="main-navigation">
-                <ul>
+               <!--  <ul>
                     <li>
                         <a href="index.html">Главная</a>
                     </li>
@@ -30,7 +30,7 @@
                     <li>
                         <a href="#">Контакты</a>
                     </li>
-                </ul>
+                </ul> -->
             </nav>
             <div class="user-block">
                 <a href="#" class="login">Вход</a>
@@ -38,20 +38,18 @@
         </div>
     </header>
     
-    <main>
+    <main class="shop-main">
         <div class="container clearfix">
-            <h1 class="shop-main-title">Средства для ухода</h1>
+            <h1 class="shop-main-title main-title">Средства для ухода</h1>
             <nav class="breadcrumbs">
                 <a href="index.html" title="Главная">Главная</a>
                 <a href="#" title="Магазин">Магазин</a>
                 <span class="last-crumb">Средства для ухода</span>
             </nav>
-            <!-- убрать crumb -->
-            <!-- поправил -->
-            <div class="content">
+            <div class="content clearfix">
                 <div class="content-filter pull-left">
                     <form action="https://echo.htmlacademy.ru" method="get">
-                        <div class="filter-group">
+                        <div class="filter-group makers">
                             <h2 class="filter-title">Производители</h2>
                             <label>
                                 <input type="checkbox" name="makers[]" value="Baxter of California" checked>
@@ -75,12 +73,8 @@
                             <label>
                                 <input type="checkbox" name="makers[]" value="American crew" checked><span class="filter-text">American crew</span>
                             </label>
-                            <!--!!  
-    							1. сделал для всех спанчиков)) class=filter-text
-                                2. Добавил скобки: name="makers[]"
-                            !!-->
                         </div>
-                        <div class="filter-group">
+                        <div class="filter-group group">
                             <h2 class="filter-title">Группы товаров</h2>
                             <label>
                                 <input type="radio" name="group" value="shavers">
@@ -95,16 +89,16 @@
                                 <span class="filter-text">Аксессуары</span>
                             </label>
                         </div>
+                        <!-- Есть вопрос по поводу оформления этой кнопки
+                        может сделать div.form-call.btn>input.btn -->
                         <div class="btn form-call-btn">
                             <input type="submit" value="Показать">
-                            <!-- убрать ссылку -->
                         </div>
                     </form>
                 </div>
-                <!-- Сделал все заголовки карточек - h3 -->
-                <!-- Вопрос по шрифту: по всему Барбершопу, текст в верхнем регистре. Нормальным шрифтом написано половина названия на карточке товара span.item-title, и дата в новостях на главной. Может им дать класс normalcase, а весь остальной текст в стилЯх у нас будет uppercase? -->
 
-                <div class="content-items">
+
+                <div class="content-items pull-right">
                     <div class="item-list clearfix">
                         <article class="item">
                             <a href="item.html" title="Подробнее">
@@ -113,7 +107,6 @@
                             <h3 class="item-title">
                                 <a href="item.html" title="Подробнее">
                                     <span class="item-type normalcase">Набор для путешествий</span>
-                                    <!-- сменил класс названия на maker-name -->
                                     <span class="maker-name">"Baxter of California"</span></a>
                             </h3>
                             
@@ -136,7 +129,7 @@
                             </h3>
                             
                             <div class="order">
-                                <span class="order-price">2900 руб.</span>
+                                <span class="order-price">750 руб.</span>
                                 <a href="#" class="btn order-btn">Купить</a>
                             </div>
                         </article>
@@ -154,7 +147,7 @@
                             </h3>
                             
                             <div class="order">
-                                <span class="order-price">2900 руб.</span>
+                                <span class="order-price">290 руб.</span>
                                 <a href="#" class="btn order-btn">Купить</a>
                             </div>
                         </article>
@@ -172,7 +165,7 @@
                             </h3>
                             
                             <div class="order">
-                                <span class="order-price">2900 руб.</span>
+                                <span class="order-price">500 руб.</span>
                                 <a href="#" class="btn order-btn">Купить</a>
                             </div>
                         </article>
@@ -190,7 +183,7 @@
                             </h3>
                             
                             <div class="order">
-                                <span class="order-price">2900 руб.</span>
+                                <span class="order-price">300 руб.</span>
                                 <a href="#" class="btn order-btn">Купить</a>
                             </div>
                         </article>
@@ -208,23 +201,20 @@
                             </h3>
                             
                             <div class="order">
-                                <span class="order-price">2900 руб.</span>
+                                <span class="order-price">3900 руб.</span>
                                 <a href="#" class="btn order-btn">Купить</a>
                             </div>
                         </article>
                     </div>
 
-                    <nav class="nav">
-                        <ul>
+                    <nav class="nav">pluginator
+                        <!-- <ul>
                             <li class="nav-page"><a href="index.html" title="1">1</a></li>
                             <li class="nav-page active"><a href="index.html" title="2">2</a></li>
                             <li class="nav-page"><a href="index.html" title="3">3</a></li>
                             <li class="nav-page"><span class="active">4</span></li>
-                        </ul>
+                        </ul> -->
                     </nav>
-                    <!-- По ТЗ - активный пункт - не ссылка. Как это? Можно через JS динамически а на span менять -->
-                    <!-- a -> span -->
-                    <!-- поправил -->
                 </div>
             </div>
 

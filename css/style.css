@@ -1,33 +1,358 @@
-
+/*Fonts*/
 
 body {
-	font-size: 14px;
-	line-height: 24px;
-	color: black;
-	font-weight: bold;
-	font-family: "PT Sans NarrowBold";
-	text-transform: uppercase; //как насчёт этого?
+  font-size: 14px;
+  line-height: 24px;
+  color: black;
+  font-weight: bold;
+  font-family: "PT Sans NarrowBold", "PT Sans", sans-serif;
+  text-transform: uppercase; 
+
 }
 
 h1 {
-	font-size: 30px;
-	color: black;
-	font-weight: bold;
-	font-family: "PT Sans NarrowBold";
+  font-size: 30px;
+  /*color: black;
+  font-weight: bold;
+  font-family: "PT Sans NarrowBold";*/
 }
 
 h2 {
-	font-size: 24px;
-	color: black;
-	font-family: "PT Sans NarrowBold";
-	font-weight: bold;
+  font-size: 24px;
+  /*color: black;
+  font-family: "PT Sans NarrowBold";
+  font-weight: bold;*/
 }
 
 h3 {
-	font-size: 14px;
-	line-height: 18px;
-	color: black;
-	font-family: "PT Sans NarrowBold";
-	font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  /*color: black;
+  font-family: "PT Sans NarrowBold";
+  font-weight: bold;*/
 }
+.normcase {
+  text-transform: none;
+}
+/* Positioning*/
+
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  /*!!! Вопрос!!!*/
+  /*Как сделать, чтобы картинка на фоне была только у главной страницы?*/
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-image: url('../img/barbershop-index-bg.jpg');
+  background-size: 2560px auto;
+  /*background for item positioning*/
+ /* background-size: 1200px auto;
+  background-image: url('../img/barbershop-item.jpg');*/
+ /* background for shop positioning*/
+ /* background-size: 1200px auto;
+  background-image: url('../img/barbershop-shop.jpg');*/
+}
+.main-header {
+  background-color: black;
+  color: white;
+  min-height: 70px;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.main-navigation {
+  float: left;
+  width: 710px;
+}
+
+.user-block {
+  float: right;
+  width: 90px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.main-container {
+  margin: 60px auto;
+}
+
+.logo {
+  width: 368px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+
+.features-row {
+  margin-bottom: 80px;
+  color: white;
+}
+
+
+.features-item {
+  float: left;
+  width: 290px;
+  margin-right: 30px;
+  min-height: 170px;
+}
+
+.features-item:last-child {
+  margin-right: 0;
+}
+
+
+.index-content {
+  margin-bottom: 20px;
+  padding: 35px 40px;
+  min-height: 360px;
+  /*ТЕКСТУРА!*/
+  background-color: #f5f2ef;
+}
+
+.index-content:last-child {
+  margin-bottom: 0;
+}
+
+.content-column-left,
+.content-column-right {
+  width: 300px;
+}
+
+.content-column-left {
+  float: left;
+  margin-left: 40px;
+}
+
+.content-column-right {
+  float: right;
+  margin-right: 40px;
+}
+
+.gallery-content {
+  margin: 0px;
+}
+.btn {
+  background-color:black;
+  color: white;
+  width: 140px;
+  height: 43px;
+}
+
+.main-footer {
+  padding: 60px 0;
+  /*ТЕКСТУРА!*/
+  background-color: #222222;
+  color: white
+}
+
+.footer-contacts {
+  float: left;
+  width: 310px;
+  margin-right: 90px;
+}
+
+.footer-social {
+  float: left;
+  width: 140px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 140px;
+}
+
+
+/**********************************************************************/
+/************************item.html*************************************/
+/**********************************************************************/
+main {
+  /*ТЕКСТУРА!*/
+  background-color: white;  
+  min-width: 1200px;
+  padding-top: 60px;
+  padding-bottom: 45px;
+}
+
+.main-title {
+  margin: 0px;
+  margin-bottom: 30px;
+}
+
+.breadcrumbs {
+  margin-bottom: 50px;
+}
+
+.last-crumb {
+  color: #aba9a7;
+}
+.galery {
+  float: left;
+}
+
+.galery .big-image{ 
+  margin-bottom: 20px;
+  width: 460px;
+  height: 498px;
+}
+.preview a {
+  float: left;
+  width: 140px;
+  margin-right: 20px;
+}
+
+.preview a:last-child {
+  margin-right: 0;
+}
+
+.right-column {
+  width: 390px;
+  float: right;
+  padding-top: 20px;
+}
+
+
+.tech-info {
+  margin-bottom: 30px;
+
+}
+.art {
+  color: #aba9a7;
+}
+
+.right-column .description {
+  margin: 0px;
+  font-size: 10px;
+  margin-bottom: 40px;
+}
+
+.order {
+  width: 187px;
+  height: 43px;
+  background-color: #e5e5e5;
+  text-align: center;
+  vertical-align: middle;/*??*/
+}
+
+.right-column .order {
+  margin-bottom: 65px;
+}
+
+
+.order .order-btn{
+  float: right;
+  width: 78px;
+  height: 100%;
+  
+}
+/**********************************************************************/
+/************************shop.html*************************************/
+/**********************************************************************/
+/* same
+main
+.main-title
+breadcrumb
+footer
+*/
+.content-filter {
+  width: 180px;
+  margin-right: 60px;
+}
+
+.filter-group {
+  min-height: 175px;
+  margin-bottom: 50px;
+}
+
+.filter-group.makers {
+  min-height: 280px;
+  margin-bottom: 30px;
+}
+ 
+.filter-title {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.form-call-btn {
+  width: 110px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+/*---------------------------------------*/
+
+.item-list {
+  width: 700px;
+  font-size: 0;
+  margin-bottom: 5px
+}
+
+.content-items .item {
+  display: inline-block; /*?*/
+  width: 220px;
+  min-height: 290px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  vertical-align: top;
+  font-size: 14px;
+}
+/*? как тогда они перескакивать будут?
+*/
+.content-items .item:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.item img {
+  margin-bottom: 10px;
+}
+
+.item-title {
+  margin-top: 0px;
+  margin-left: auto;
+  margin-bottom: 15px;
+  margin-right: 0px;
+}
+
+.nav {
+  height: 43px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
